@@ -1,0 +1,49 @@
+.resposta{
+    display: flex;
+    align-self: stretch;
+    height: 100px;
+    min-width: 500px;
+    width: 80%;
+    margin: 10px;
+}
+
+.conteudoResposta{
+    position: relative;
+    display: flex;
+    flex: 1;
+}
+
+.frente, .verso{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.frente{
+    border-radius: 12px;
+    padding: 15px;
+    align-items: center;
+    color: #000;
+    background-color: rgb(252, 231, 204);
+}
+
+.letra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 12px;
+    color: #fff
+}
+
+.valor{
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+
