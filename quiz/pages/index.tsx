@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import Questao from '../components/Questao'
+import Questionario from '../components/Questionario';
 import QuestaoModel from '../model/questao'
 import RespostaModel from '../model/resposta'
 
@@ -15,19 +15,28 @@ const questaoMock = new QuestaoModel(1, "Qual é a melhor cor?", [
 export default function Home() {
   const [questao, setQuestao] = useState(questaoMock)
 
-  function respostaFornecida(indice: number){
-    setQuestao(questao.responderCom(indice))
+  function questaoRespondida(questao: QuestaoModel){
+
   }
 
+  function irPraProximoPasso() {}
+
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      height: '100vh',
-      alignItems: 'center'
-     }}>
-      <Questao valor={questao}
-              respostaFornecida={respostaFornecida}/>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        height: "100vh",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <Questionario
+        questao={questao}
+        ultimaPergunta={false}
+        questaoRespondida={questaoRespondida}
+        irPraProximoPasso={irPraProximoPasso}
+      />
     </div>
   );
 }
