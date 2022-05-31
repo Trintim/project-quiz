@@ -31,7 +31,7 @@ export default class RespostaModel {
   }
 
   //TODO const resp = new RespostaModel(...)
-  //TODO res.metodoDeInstancia()
+  //TODO resp.metodoDeInstancia()
 
   //TODO RespostaModel.metodoStatic()
 
